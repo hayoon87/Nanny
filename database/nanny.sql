@@ -1,10 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: localhost:3306
--- Generation Time: Mar 18, 2024 at 10:36 PM
--- Server version: 8.0.30
+
 -- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -282,8 +276,7 @@ ALTER TABLE `working_hours`
 --
 
 --
--- Constraints for table `feedback`
---
+
 ALTER TABLE `feedback`
   ADD CONSTRAINT `feedback_customer_id_foreign` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `feedback_nanny_id_foreign` FOREIGN KEY (`nanny_id`) REFERENCES `nanny` (`nanny_id`) ON DELETE CASCADE ON UPDATE CASCADE;
